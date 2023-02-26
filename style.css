@@ -1,0 +1,258 @@
+
+/*图片*/
+.display1{
+    display: table-cell; 
+    vertical-align: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.image_avatar{
+    border-radius: 50%;
+    justify-items: auto ;
+    
+}
+
+.icon{
+    justify-items: auto ;
+}
+
+h1 { /*左上角logo*/
+    position: fixed;
+    top: -10px;
+    left: 40px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 900;
+    font-style: italic;
+}
+  
+
+/*导航栏*/
+nav { /*导航栏背景色*/
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+    z-index: 9997;
+}
+  
+nav ul { /*导航栏排版*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:contents;
+    justify-content: space-between;
+    align-items: right;
+    background-color: #ffffff;
+}
+
+nav li {
+    float: right;
+    position: relative;
+}
+  
+nav li a { /*每个菜单按钮的外观*/
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #111111;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+}
+ 
+li a:hover { /* 鼠标放上去后的背景色 */
+    color: #111111;
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover a { /*上方下拉菜单栏背景*/
+    background-color: #f2f2f2;
+    opacity: 100%;
+}
+
+.dropdown-menu a { /*下方下拉菜单栏文字*/
+    display: block;
+    color: #111111;
+    text-decoration: none;
+    padding-left: 8px 0;
+}
+
+.dropdown-menu { /*下方下拉菜单栏背景*/
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 130px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    opacity: 100%;
+}
+  
+.dropdown:hover .dropdown-menu { /*下拉菜单栏内容*/
+    display: block;
+}
+  
+.dropdown-menu a:hover { /*下方下拉菜单栏选中后背景*/
+    background-color: #d8d8d8;
+}
+
+/*文字*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9998;
+    
+}
+
+.info{
+    font-family: 'Kanit', sans-serif;
+    vertical-align: center;
+    text-align: center;
+    padding-top:unset;
+    font-size: 40px;
+    font-size-adjust:unset;
+}
+
+.icon-text {
+    display: inline-block;
+    margin-right: 20px; /* 可选，设置图标和文字之间的间距 */
+    padding-left: 20px;
+}
+  
+.icon {
+    width: 25px; /* 可选，设置图标的宽度 */
+    height: 25px; /* 可选，设置图标的高度 */
+    vertical-align: middle; /* 可选，设置图标垂直居中 */
+}
+  
+.text {
+    font-size: 16px; /* 可选，设置文字的字体大小 */
+    vertical-align: middle; /* 可选，设置文字垂直居中 */
+    font-family: 'Kanit',sans-serif;
+    font-weight: 200;
+}
+  
+
+.main {
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    overflow-y: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main::-webkit-scrollbar{
+    position:absolute;
+
+}
+
+h2 {
+    padding-left: 200px;
+    padding-top: 80px;
+    padding-bottom: 16px;
+    font-family:Times;
+    color:#232323;
+    font-size:40px ;
+}
+  
+.summary{
+    padding-left: 280px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#232323;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu1{ /*HKUB*/
+    padding-left: 280px;
+    padding-bottom: 12px;
+    font-family:Times;
+    color:#232323;
+    font-size:28px;
+    font-weight:bolder;
+}
+
+.edu2{ /*IM*/
+    padding-left: 280px;
+    padding-bottom:4px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#232323;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu3{ /*IM bullet point*/
+    padding-left: 300px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#232323;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu4{ /*IM courses*/
+    padding-left: 312px;
+    padding-top:0px;
+    padding-bottom: 10px;
+    word-spacing: 0px;
+    line-height: 32px;
+    color: #232323;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu5{ /*SDJZ*/
+    padding-left: 280px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    font-family:Times;
+    color:#232323;
+    font-size:28px;
+    font-weight:bolder;
+    
+}
+
+.work1{ /*work bullet point*/
+    padding-left: 300px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#232323;
+    font-family:Times;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 自定义高度 */
+    color: #232323;
+    text-align: center;
+    margin-top: 20px;
+}
