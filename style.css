@@ -195,6 +195,25 @@ h2 {
     font-weight:bolder;
 }
 
+.time{
+    padding-right: 20px;
+    text-align: end;
+    font-size: 20px;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center; /* 垂直居中 */
+    padding-left: 280px;
+    padding-bottom:4px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#232323;
+    font-family:Times;
+    font-size: 20px;
+  }
+
 .edu2{ /*IM*/
     padding-left: 280px;
     padding-bottom:4px;
