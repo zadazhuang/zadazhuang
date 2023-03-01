@@ -1,13 +1,16 @@
 
 /*图片*/
 .display1{
-    display: table-cell; 
-    vertical-align: center;
-    text-align: center;
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .image_avatar{
+    max-width: 40%;
+    max-height: 40%;
     border-radius: 50%;
     justify-items: auto ;
     
@@ -17,7 +20,46 @@
     justify-items: auto ;
 }
 
-h1 { /*左上角logo*/
+
+.background-effect {
+        /* 背景图样式 */
+        background-image: url('./image/homepage_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        /* 添加hover时的背景效果 */
+        position: relative;
+}
+      
+.background-effect:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+}
+      
+.background-effect:hover::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background-image: url('./image/homepage_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+      }
+      
+
+    
+/*h1 { 左上角logo
     position: fixed;
     top: -10px;
     left: 40px;
@@ -25,7 +67,7 @@ h1 { /*左上角logo*/
     font-family: 'Kanit', sans-serif;
     font-size: 900;
     font-style: italic;
-}
+}*/
   
 
 /*导航栏*/
@@ -46,7 +88,7 @@ nav ul { /*导航栏排版*/
     display:contents;
     justify-content: space-between;
     align-items: right;
-    background-color: #ffffff;
+    background-color:#ffffff;
 }
 
 nav li {
@@ -60,30 +102,127 @@ nav li a { /*每个菜单按钮的外观*/
     padding-right: 22px;
     padding-top: 22px;
     padding-bottom: 12px;
-    color: #111111;
+    color: #ccc;
     text-decoration: none;
     text-transform: none;
     font-size: 18px;
-}
- 
-li a:hover { /* 鼠标放上去后的背景色 */
-    color: #111111;
-    background-color: #f2f2f2;
+    font-weight: bolder;
 }
 
-.dropdown:hover a { /*上方下拉菜单栏背景*/
+nav li p { /*每个菜单按钮的外观*/
+    display:contents;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #333;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+nav li div{
+    display:contents;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #232323;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: bolder;
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+}
+ 
+/*li a:hover { /* 鼠标放上去后的背景色 
+    color: #111111;
+    background-color: #f2f2f2;
+}*/
+
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: #7d7d7d;
+  }
+  .name{ /*左上角logo*/
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+
+.name:hover{
+    color: #111111;
+    background-color: unset;
+}
+
+.name:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: unset;
+}
+
+.name_about{ /*左上角logo*/
+    position: fixed;
+    top: 12px;
+    left: 42px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+    text-decoration: none;
+    color: #111111;
+    z-index: 9999;
+}
+.name_about:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: unset;
+}
+
+
+
+
+/*.dropdown:hover a { /*上方下拉菜单栏背景
     background-color: #f2f2f2;
     opacity: 100%;
 }
 
-.dropdown-menu a { /*下方下拉菜单栏文字*/
+.dropdown-menu a { /*下方下拉菜单栏文字
     display: block;
     color: #111111;
     text-decoration: none;
     padding-left: 8px 0;
 }
 
-.dropdown-menu { /*下方下拉菜单栏背景*/
+.dropdown-menu { /*下方下拉菜单栏背景
     display: none;
     position: absolute;
     top: 100%;
@@ -94,12 +233,46 @@ li a:hover { /* 鼠标放上去后的背景色 */
     opacity: 100%;
 }
   
-.dropdown:hover .dropdown-menu { /*下拉菜单栏内容*/
+.dropdown:hover .dropdown-menu { /*下拉菜单栏内容
     display: block;
 }
   
-.dropdown-menu a:hover { /*下方下拉菜单栏选中后背景*/
+/*.dropdown-menu a:hover { /*下方下拉菜单栏选中后背景
     background-color: #d8d8d8;
+}
+.dropdown-menu  a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* 在选项下方显示 
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+  }*/
+
+.name{ /*左上角logo*/
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.name:hover{
+    color: #111111;
+    background-color: #ffffff;
+}
+
+.name:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
 }
 
 /*文字*/
@@ -135,7 +308,7 @@ html, body {
 .icon-text {
     display: inline-block;
     margin-right: 20px; /* 可选，设置图标和文字之间的间距 */
-    padding-left: 20px;
+    padding-left: 40px;
 }
   
 .icon {
@@ -144,13 +317,14 @@ html, body {
     vertical-align: middle; /* 可选，设置图标垂直居中 */
 }
   
-.text {
+.text a{
     font-size: 16px; /* 可选，设置文字的字体大小 */
     vertical-align: middle; /* 可选，设置文字垂直居中 */
-    font-family: 'Kanit',sans-serif;
-    font-weight: 200;
+    font-weight: normal;
+    text-align: left;
+    text-decoration:none;
+    color:#111111;
 }
-  
 
 .main {
     width: 75%;
@@ -181,7 +355,7 @@ h2 {
     padding-left: 280px;
     word-spacing: 0px;
     line-height:32px;
-    color:#232323;
+    color:#333;
     font-family:Times;
     font-size: 20px;
 }
@@ -190,7 +364,7 @@ h2 {
     padding-left: 280px;
     padding-bottom: 12px;
     font-family:Times;
-    color:#232323;
+    color: #333;
     font-size:28px;
     font-weight:bolder;
 }
@@ -209,7 +383,7 @@ h2 {
     padding-bottom:4px;
     word-spacing: 0px;
     line-height:32px;
-    color:#232323;
+    color:#333;
     font-family:Times;
     font-size: 20px;
   }
@@ -219,7 +393,7 @@ h2 {
     padding-bottom:4px;
     word-spacing: 0px;
     line-height:32px;
-    color:#232323;
+    color:#333;
     font-family:Times;
     font-size: 20px;
 }
@@ -228,7 +402,7 @@ h2 {
     padding-left: 300px;
     word-spacing: 0px;
     line-height:32px;
-    color:#232323;
+    color:#333;
     font-family:Times;
     font-size: 20px;
 }
@@ -239,7 +413,7 @@ h2 {
     padding-bottom: 10px;
     word-spacing: 0px;
     line-height: 32px;
-    color: #232323;
+    color: #333;
     font-family:Times;
     font-size: 20px;
 }
@@ -249,17 +423,18 @@ h2 {
     padding-top: 20px;
     padding-bottom: 12px;
     font-family:Times;
-    color:#232323;
+    color:#333;
     font-size:28px;
     font-weight:bolder;
     
 }
 
+
 .work1{ /*work bullet point*/
     padding-left: 300px;
     word-spacing: 0px;
     line-height:32px;
-    color:#232323;
+    color:#333;
     font-family:Times;
     font-size: 20px;
     font-weight: bolder;
@@ -271,7 +446,102 @@ h2 {
     left: 0;
     width: 100%;
     height: 50px; /* 自定义高度 */
-    color: #232323;
+    color: #333;
     text-align: center;
     margin-top: 20px;
 }
+
+.footer-re {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 自定义高度 */
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.work-list {
+    padding: 40px, 40px, 40px, 40px;
+    display: flex;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  .work-item {
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .work-item img {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .work-item h3 {
+    margin: 10px;
+    color:#333
+  }
+  
+  .work-item p {
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color:#333
+  }
+  
+  .work-item:hover img {
+    transform: translateY(-20px);
+  }
+  
+  .work-item:hover p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .work-item a{
+    text-decoration: none;
+    color:#333
+  }
+
+  .projectlayout{
+    display: flex;
+    padding: 40px, 40px, 40px, 40px;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+
+  .projectlayout img{
+    width: 300px;
+    height: auto;
+    display: block;
+
+  }
+
+  .projectlayout span img{
+    width: 450px;
+    height: auto;
+    display: block;
+    justify-content: center;
+  }
+
+  .projectlayout p{
+    margin: 10px;
+    text-align: left;
+    color:#333;
+  }
+
+.iframe1{
+    display: flex;
+    padding: 40px, 40px, 40px, 40px;
+    grid-gap: 20px;
+    justify-content: center;
+  }
