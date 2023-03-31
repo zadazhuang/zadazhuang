@@ -1,0 +1,593 @@
+
+/*图片*/
+.display1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image_avatar{
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 50%;
+    justify-items: auto ;
+    
+}
+
+.icon{
+    justify-items: auto ;
+}
+
+
+.bg-image {
+    background-image: url('./image/bg6.gif');
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+    
+/*h1 { 左上角logo
+    position: fixed;
+    top: -10px;
+    left: 40px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 900;
+    font-style: italic;
+}*/
+  
+
+/*导航栏*/
+nav { /*导航栏背景色*/
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+    z-index: 9997;
+}
+  
+nav ul { /*导航栏排版*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:contents;
+    justify-content: space-between;
+    align-items: right;
+    background-color:#ffffff;
+}
+
+nav li {
+    float: right;
+    position: relative;
+}
+  
+nav li a { /*每个菜单按钮的外观*/
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #ccc;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+nav li p { /*每个菜单按钮的外观*/
+    display:contents;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #232323;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+nav li div{
+    display:contents;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #111111;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: bolder;
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+nav a:hover{
+    color:#111
+}
+ 
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: #7d7d7d;
+  }
+.name{ /*左上角logo*/
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;}
+.name:hover{
+    color: #111111;
+    background-color: unset;}
+.name:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: unset;}
+.name_about{ /*左上角logo*/
+    position: fixed;
+    top: 12px;
+    left: 42px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+    text-decoration: none;
+    color: #111111;
+    z-index: 9999;}
+.name_about:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: unset;}
+
+.dropdown:hover a { /*上方下拉菜单栏背景*/
+    background-color:none;
+    opacity: 100%;
+}
+.dropdown-menu p:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+.dropdown-menu { /*下方下拉菜单栏背景*/
+    display: none;
+    position: absolute;
+    top: 63px;
+    width: 100px;
+    background-color:#ffffff;
+    padding: 6px;
+    opacity: 100%;
+}
+  
+.dropdown-menu a { /*下方下拉菜单栏文字*/
+    display: block;
+    color: #7d7d7d;
+    text-decoration: none;
+    display:contents;
+    left: 5px;
+    text-transform: none;
+    font-family: 'Kanit', sans-serif;
+    font-weight:bolder;
+    font-size: 18px;;
+}
+.dropdown-menu a:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover:before {
+    background-color: black;
+  }
+
+.dropdown-menu a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* 在选项下方显示 */
+    width: 100%;
+    height: 0px;
+    background-color:none;
+  }
+
+.dropdown-menu p{
+    display:contents;
+    padding-left:22px;
+    padding-right: 22px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    color: #7d7d7d;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+    z-index:9996;
+}
+
+.dropdown-menu p:hover{
+    color:#111
+}
+
+.dropdown:hover .dropdown-menu { /*下拉菜单栏内容*/
+    display: block;
+    font-family: 'Kanit', sans-serif;
+}
+
+.name{ /*左上角logo*/
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.name:hover{
+    color: #111111;
+    background-color: #ffffff;
+}
+
+.name:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* 在选项下方显示 */
+    width: 100%;
+    height: 3px;
+}
+
+/*文字*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9998;
+    
+}
+
+.info{
+    font-family: 'Kanit', sans-serif;
+    vertical-align: center;
+    text-align: center;
+    padding-top:unset;
+    font-size: 40px;
+    font-size-adjust:unset;
+}
+
+.icon-text {
+    display: inline-block;
+    margin-right: 20px; /* 可选，设置图标和文字之间的间距 */
+    padding-left: 40px;
+}
+  
+.icon {
+    width: 25px; /* 可选，设置图标的宽度 */
+    height: 25px; /* 可选，设置图标的高度 */
+    vertical-align: middle; /* 可选，设置图标垂直居中 */
+}
+  
+.text a{
+    font-size: 16px; /* 可选，设置文字的字体大小 */
+    vertical-align: middle; /* 可选，设置文字垂直居中 */
+    font-weight: normal;
+    text-align: left;
+    text-decoration:none;
+    color:#111111;
+}
+
+.main {
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    overflow-y: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main::-webkit-scrollbar{
+    position:absolute;
+
+}
+
+h2 {
+    padding-left: 200px;
+    padding-top: 80px;
+    padding-bottom: 16px;
+    font-family:Times;
+    color:#232323;
+    font-size:40px ;
+}
+  
+.summary{
+    padding-left: 280px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#333;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu1{ /*HKUB*/
+    padding-left: 280px;
+    padding-bottom: 12px;
+    font-family:Times;
+    color: #333;
+    font-size:28px;
+    font-weight:bolder;
+}
+
+.time{
+    padding-right: 20px;
+    text-align: end;
+    font-size: 20px;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center; /* 垂直居中 */
+    padding-left: 280px;
+    padding-bottom:4px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#333;
+    font-family:Times;
+    font-size: 20px;
+  }
+
+.edu2{ /*IM*/
+    padding-left: 280px;
+    padding-bottom:4px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#333;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu3{ /*IM bullet point*/
+    padding-left: 300px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#333;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu4{ /*IM courses*/
+    padding-left: 312px;
+    padding-top:0px;
+    padding-bottom: 10px;
+    word-spacing: 0px;
+    line-height: 32px;
+    color: #333;
+    font-family:Times;
+    font-size: 20px;
+}
+
+.edu5{ /*SDJZ*/
+    padding-left: 280px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    font-family:Times;
+    color:#333;
+    font-size:28px;
+    font-weight:bolder;
+    
+}
+
+
+.work1{ /*work bullet point*/
+    padding-left: 300px;
+    word-spacing: 0px;
+    line-height:32px;
+    color:#333;
+    font-family:Times;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 自定义高度 */
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-re {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 自定义高度 */
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.work-list {
+    padding: 40px, 40px, 40px, 40px;
+    display: flex;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  .work-item {
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .work-item img {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+
+  .work-item h3 {
+    margin: 10px;
+    color:#333
+  }
+  
+  .work-item p {
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color:#333
+  }
+  
+  .work-item:hover img {
+    transform: translateY(-20px);
+  }
+  
+  .work-item:hover p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .work-item a{
+    text-decoration: none;
+    color:#333
+  }
+
+  .work-item2 {
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .work-item2 img {
+    width: 450px;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+
+  .work-item2 h3 {
+    margin: 10px;
+    color:#333
+  }
+  
+  .work-item2 p {
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color:#333
+  }
+  
+  .work-item2:hover img {
+    transform: translateY(-20px);
+  }
+  
+  .work-item2:hover p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .work-item2 a{
+    text-decoration: none;
+    color:#333
+  }
+
+  .projectlayout{
+    display: flex;
+    padding: 40px, 40px, 40px, 40px;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+
+  .projectlayout img{
+    width: 450px;
+    height: auto;
+    display: block;
+
+  }
+
+  .projectlayout span img{
+    width: 450px;
+    height: auto;
+    display: block;
+    justify-content: center;
+  }
+
+  .projectlayout p{
+    margin: 10px;
+    text-align: left;
+    color:#333;
+  }
+
+.iframe1{
+    display: flex;
+    padding: 40px, 40px, 40px, 40px;
+    grid-gap: 20px;
+    justify-content: center;
+  }
