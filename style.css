@@ -184,7 +184,7 @@ nav a:hover::after {
     display: none;
     position: absolute;
     top: 63px;
-    width: 100px;
+    width: 160px;
     background-color:#ffffff;
     padding: 6px;
     opacity: 100%;
